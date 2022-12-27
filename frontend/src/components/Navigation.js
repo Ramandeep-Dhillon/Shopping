@@ -10,13 +10,13 @@ const Navi = () => {
   };
   return (
     <div>
-        <img alt = 'logo' 
-        className = 'logo'
-        src='https://i.ebayimg.com/images/g/e5AAAOSwnpNg698~/s-l1600.jpg' />
+      <img
+        alt="logo"
+        className="logo"
+        src="https://i.ebayimg.com/images/g/e5AAAOSwnpNg698~/s-l1600.jpg"
+      />
 
-      {
-      
-      auth ? (
+      {auth ? (
         <ul className="navi-ul">
           <li>
             <Link to="/">Products</Link>
@@ -28,13 +28,9 @@ const Navi = () => {
             <Link to="/update">Update Products</Link>
           </li>
           <li>
-            <Link to="/profile">Profile</Link>
-          </li>
-          <li>
-            {" "}
-            <Link onClick={logout} to="/signup">
+            <Link to="/signup" onClick={logout}>
               Logout ({JSON.parse(auth).name})
-            </Link>{" "}
+            </Link>
           </li>
         </ul>
       ) : (
